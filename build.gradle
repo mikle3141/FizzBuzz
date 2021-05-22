@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'org.example'
@@ -29,3 +30,8 @@ jar {
         configurations.implementation.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
+
+application {
+    mainClassName = 'com.gradle.tutorial.FizzBuzzProcessor'
+}
+
